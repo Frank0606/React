@@ -1,0 +1,23 @@
+import { useEffect, useState } from "react";
+
+const App = () => {
+
+  const [contador, setContador] = useState(0)
+
+  useEffect(() => {
+    alert("Se ha cambiado el contador a " + contador)
+  }, [contador])
+
+  return (
+    <div className="App">
+      {/* <Alumno nombre={"Jose Antonio"} apellido={"Espinoza"} edad={22} />
+      <Alumno nombre={"Eric Jair"} apellido={"Lopez"} edad={20} />
+      <Alumno nombre={"Mattai"} apellido={"Mortero"} edad={21} /> */}
+      <button onClick={() => setContador(contador -1)}>-</button>
+      <h1>{contador}</h1>
+      <button onClick={() => setContador(contador + 1)}>+</button>
+    </div>
+  );
+}
+
+export default App;
